@@ -28,8 +28,10 @@ public class Coffee extends Beverage{
 	public boolean isDecaf() {
 		return this.isDecaf;
 	}
-	
+	@Override
+//	partial override
 	public void drink() {
+		super.drink();
 		System.out.println("Coffee: Wow, thats hot");
 	}
 
