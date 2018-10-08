@@ -9,7 +9,7 @@ package Initialization;
  */
 public class InitializationSuper {
 	
-	private InitializationObject io = new InitializationObject();
+	private InitializationObject io = new InitializationObject("Test");
 	public InitializationSuper(){
 		System.out.println("InitializationSuper constructor");
 	}

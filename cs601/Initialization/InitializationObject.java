@@ -9,7 +9,7 @@ package Initialization;
  */
 public class InitializationObject {
 
-	public InitializationObject() {
-		System.out.println("InitializationObject constructor");
+	public InitializationObject(String msg) {
+		System.out.println("InitializationObject constructor " + msg);
 	}
 }
