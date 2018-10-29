@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Thread;
+package Thread.synchronize;
 
 /**
  * @author rozitateymourzadeh
@@ -13,8 +13,13 @@ public class Adder {
 	 * @param args
 	 */
 	int value = 0;
-	public synchronized void increment() {
-		value++;
+//	public synchronized void increment() {
+//		value++;
+//	}
+	public void increment() {
+		synchronized(this) {
+			value++;
+		}
 	}
 	public static void main(String[] args) {
 

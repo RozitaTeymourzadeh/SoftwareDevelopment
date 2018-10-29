@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Thread;
+package Thread.synchronize;
 
 /**
  * @author rozitateymourzadeh
