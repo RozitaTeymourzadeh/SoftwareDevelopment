@@ -11,14 +11,14 @@ public class InfinitePrinter implements Runnable {
 	private String prefix;
 	private boolean running;
 	 
-	public InfinitePrinter(String prefix, Boolean running) {
+	public InfinitePrinter(String prefix) {
 		this.prefix = prefix;
 		this.running = true; 
 	}
 	
 	public InfinitePrinter() {
-//		this("default");
-	} 
+		this("default");
+	}
 
 	@Override
 	public void run() {
@@ -26,7 +26,7 @@ public class InfinitePrinter implements Runnable {
 		// this will execute when thread start method is invoked
 		
 		int count = 1;
-		while(running && count < Integer.MAX_VALUE) {
+		while(running && count < 100) {
 			System.out.println(prefix + "_" + count++);
 		}
 		
