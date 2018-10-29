@@ -8,7 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-/*Comparison to use Thread as ArrayList or use it as ThreadPool*/
+/*Comparison to use Synchronize (Main Thread), Thread as ArrayList ()or use it as ThreadPool*/
+// Single Thread 28
+// OneThread 20
+// ThreadPool 14
 /*ThreadPool is faster*/
 
 public class SummationExample {
