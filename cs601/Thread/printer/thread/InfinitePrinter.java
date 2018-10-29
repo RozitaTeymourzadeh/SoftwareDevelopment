@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Thread;
+package Thread.printer.thread;
 
 /**
  * @author rozitateymourzadeh
@@ -10,19 +10,19 @@ package Thread;
 public class InfinitePrinter implements Runnable {
 	private String prefix;
 	private boolean running;
-	
+	 
 	public InfinitePrinter(String prefix, Boolean running) {
 		this.prefix = prefix;
-		this.running = true;
+		this.running = true; 
 	}
 	
 	public InfinitePrinter() {
 //		this("default");
-	}
+	} 
 
 	@Override
 	public void run() {
-		// main jaob execute in this thread
+		// main jab execute in this thread
 		// this will execute when thread start method is invoked
 		
 		int count = 1;
