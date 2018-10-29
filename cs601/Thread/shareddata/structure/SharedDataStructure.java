@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Thread;
+package Thread.shareddata.structure;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -11,6 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @author rozitateymourzadeh
  *
  */
+// Study these concept : lock() / tryLock() / ReentrantReadWriteLock()
 public class SharedDataStructure {
 
 	private ConcurrentHashMap<Integer, String> values;
@@ -34,7 +35,6 @@ public class SharedDataStructure {
 			this.rwl.readLock().lock();
 			return this.values.size();
 		} finally {
-
 			this.rwl.readLock().unlock();
 		}
 	}

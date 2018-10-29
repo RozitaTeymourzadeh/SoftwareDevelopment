@@ -31,9 +31,9 @@ public class CS601BlockingQueue<T> {
 
 		}
 		// Wrong statement ,take a lot CPU
-		while(size == items.length) {
-			;
-		}
+//		while(size == items.length) {
+//			;
+//		}
 		
 		int next = (end+1)%items.length;
 		items[next] = item;

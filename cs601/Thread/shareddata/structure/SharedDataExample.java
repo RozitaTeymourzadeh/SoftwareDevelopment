@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Thread;
+package Thread.shareddata.structure;
 
 /**
  * @author rozitateymourzadeh

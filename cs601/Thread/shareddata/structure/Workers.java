@@ -1,8 +1,8 @@
 /**
  * 
  */
-package Thread;
-import java.lang.Runnable;
+package Thread.shareddata.structure;
+import java.util.ArrayList;
 /**
  * @author rozitateymourzadeh
  *
@@ -10,9 +10,8 @@ import java.lang.Runnable;
 public class Workers implements Runnable{
 
 	private SharedDataStructure sds;
+	
 	public Workers(SharedDataStructure sds) {
-
-		this.sds = sds;
 	}
 
 	@Override
