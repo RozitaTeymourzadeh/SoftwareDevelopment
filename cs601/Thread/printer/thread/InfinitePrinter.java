@@ -9,7 +9,7 @@ package Thread.printer.thread;
  */
 public class InfinitePrinter implements Runnable {
 	private String prefix;
-	private boolean running;
+	private volatile boolean running;
 	 
 	public InfinitePrinter(String prefix) {
 		this.prefix = prefix;
@@ -29,7 +29,10 @@ public class InfinitePrinter implements Runnable {
 		while(running && count < 100) {
 			System.out.println(prefix + "_" + count++);
 		}
-		
+	}
+	
+	public void stop() {
+		this.running = false;
 	}
 
 }
