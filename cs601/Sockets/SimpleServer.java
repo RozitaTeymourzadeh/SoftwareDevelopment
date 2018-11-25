@@ -1,7 +1,7 @@
 /**
  * 
  */
-package simple.server.client;
+package Sockets;
 
 /**
  * @author rozitateymourzadeh
@@ -16,6 +16,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import logger.cs601Logger;
 
 /**
  * Simple Server 
@@ -27,14 +31,16 @@ public class SimpleServer {
 	final static String EOST = "EOST"; // End of server transfer protocol
 
 	public static void main(String[] args) {
+		cs601Logger.setup();
+		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		boolean running = true;
 		ServerSocket server = null; 
+		
 		try {
 			server = new ServerSocket(1027);
 		} catch (Exception ioe) {
-			System.out.println("Server is busy!!");
+			logger.log(Level.SEVERE, "Server is busy!!", ioe.getMessage());
 			ioe.printStackTrace();
-			System.exit(1);
 		}
 		while(running) {
 			try (
@@ -50,10 +56,15 @@ public class SimpleServer {
 					line = instream.readLine(); //read next line
 				}
 				System.out.println("Server is running");
+				
+				logger.log(Level.INFO, "Request Received: ", message);
+				
+				// Display client message 
 				System.out.println("Client Says:" + message);
 
 			}catch(IOException ioe) {
 				ioe.printStackTrace();
+				logger.log(Level.SEVERE, ioe.getMessage());
 			}
 		}
 	}
