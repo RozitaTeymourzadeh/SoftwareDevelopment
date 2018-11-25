@@ -27,7 +27,7 @@ public class BinaryServer {
 	public static void main(String[] srgs) {
 		try(ServerSocket server = new ServerSocket(1024);
 				Socket sock = server.accept();
-				//				BufferedReader instream = new BufferedReader(new InputStreamReader(sock.getInputStream()))
+				//BufferedReader instream = new BufferedReader(new InputStreamReader(sock.getInputStream()))
 				InputStream instream = sock.getInputStream();
 				PrintWriter writer = new PrintWriter(sock.getOutputStream(), true)
 				){
