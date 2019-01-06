@@ -2,29 +2,24 @@
  * 
  */
 package Sockets;
+/**
+ * Binary Server
+ * 
+ */
 
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-
-/**
- * /**
- * This is a very poorly designed HTTP server able to reply to one request with a static HTML page.
- * @author srollins
- *
- */
 
 public class BinaryServer {
 
 	//to test using curl: curl -X POST --data-binary @image.jpeg "http://localhost:1024"
 
-	public static void main(String[] srgs) {
+	public static void main(String[] args) {
 		try(ServerSocket server = new ServerSocket(1024);
 				Socket sock = server.accept();
 				//BufferedReader instream = new BufferedReader(new InputStreamReader(sock.getInputStream()))

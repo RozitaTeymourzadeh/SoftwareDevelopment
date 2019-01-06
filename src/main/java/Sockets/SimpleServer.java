@@ -3,13 +3,6 @@
  */
 package Sockets;
 
-/**
- * @author rozitateymourzadeh
- *
- */
-/**
- * 
- */
 
 import java.io.BufferedReader;
 import java.io.IOException;

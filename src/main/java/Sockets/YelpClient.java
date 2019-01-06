@@ -4,6 +4,8 @@
 package Sockets;
 
 /**
+ * Yelp Client
+ * @author Rozita Teymourzadeh
  * @author sroline
  *
  */

@@ -12,9 +12,9 @@ import java.sql.SQLException;
 public class JDBCPreparedStatementExample {
 
 	public static void main(String[] args) throws SQLException {
-		String username  = "user01";
-		String password  = "user01";
-		String db  = "user01";
+		String username  = "user35";
+		String password  = "user35";
+		String db  = "user35";
 
 		try {
 			// load driver
@@ -28,6 +28,7 @@ public class JDBCPreparedStatementExample {
 		// format "jdbc:mysql://[hostname][:port]/[dbname]"
 		//note: if connecting through an ssh tunnel make sure to use 127.0.0.1 and
 		//also to that the ports are set up correctly
+
 		String urlString = "jdbc:mysql://sql.cs.usfca.edu/"+db;
 		//Must set time zone explicitly in newer versions of mySQL.
 		String timeZoneSettings = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
